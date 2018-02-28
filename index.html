@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Responsive Images</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Images</h1>
+    </header>
+
+    <main>
+        <div id="srcset-container" class="srcset-container">
+            <div class="img-container">
+                <img src="img/landscape.jpg" alt="Landscape from Cuba"
+                srcset="img/landscape_w300.jpg 300w,
+                    img/landscape_w400.jpg 400w,
+                    img/landscape.jpg 800w"
+                sizes="(max-width: 300px) 300px,
+                    (max-width: 399px) 399px,
+                    (min-width: 400px) 300px,
+                    300px">
+            </div>
+            <div class="txt-container">
+                This text area belongs to the landscape image
+            </div>
+        </div>
+        <div id="srcset-container2" class="srcset-container2">
+            <div class="img-container">
+                <img src="img/macro_w300.jpg" alt="Macro of a snowdrop leaf"
+                srcset="img/macro_w300.jpg 1x,
+                img/macro_w600.jpg 2x">
+            </div>
+            <div class="txt-container">
+                This text area belongs to the macro image
+            </div>
+        </div>
+        <div id="picture-container" class="picture-container">
+            <div class="img-container">
+                <picture>
+                    <source media="(max-width: 300px)"
+                    srcset="img/fish_w300.jpg, img/fish_w600.jpg 2x">
+                    <source media="(max-width: 399px)"
+                    srcset="img/fish_w400.jpg, img/fish.jpg 2x">
+                    <source media="(min-width: 400px)"
+                    srcset="img/fish_w300.jpg, img/fish_w600.jpg 2x">
+                    <img src="img/fish_w400.jpg" alt="Underwater photo">
+                </picture>
+            </div>
+            <div class="txt-container">
+                    This text area belongs to the fish image
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        Visit the <a href="https://seabadger.io/tech/website-optimization/optimized-responsive-images/">
+        blog entry</a> for details<br>
+        Copyright 2018
+        <a href="https://seabadger.io" target="_blanks">SeaBadger.io</a>
+    </footer>
+
+</body>
+
+</html>
